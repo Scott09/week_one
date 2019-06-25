@@ -1,0 +1,10 @@
+Hello this is me adding text to my vim file
+
+Some more here
+
+Okay a bit more
+
+I'm done..
+
+I'm done..
+
