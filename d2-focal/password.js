@@ -1,19 +1,21 @@
 const passwordarg = process.argv[2];
 
-const password = function(password) {
-  for (let j = 0; j < password.length; j++) {
-    if (password[j] === "a"){
-      password[j] = "4";
-    } else if (password[j] === "e") {
-      password[j] = "3";
-    } else if (password[j] === "o") {
-      password[j] = "0";
-    } else if (password[j] === "l") {
-      password[j] = "1";
+const obfuscate = function(password) {
+  let passwordArray = password.split('');
+  for (let i = 0; i < passwordArray.length; i++){
+    if (passwordArray[i] === "a"){
+      passwordArray[i] = "4"; 
+    } else if (passwordArray[i] === "e"){
+      passwordArray[i] = "3";
+    } else if (passwordArray[i] === "o"){
+      passwordArray[i] = "0";
+    } else if (passwordArray[i] === "l"){
+      passwordArray[i] = "1";
     }
   }
-  return password;
+  let mypasswordString = passwordArray.join('');
+  return mypasswordString;
 };
 
 
-console.log(password(passwordarg));
+console.log(obfuscate(passwordarg));
