@@ -12,6 +12,7 @@
 // Write our function (we must define it too!) below
 // ...
 
+
 const joinList = (list) => {
   let joinedString = '';
   for (let i = 0; i < list.length; i++) {
