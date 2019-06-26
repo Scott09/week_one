@@ -18,7 +18,7 @@ const joinList = (list) => {
     if (i === list.length - 1) {
       joinedString += list[i];
     } else {
-      joinedString += list[i] + ', ';
+      joinedString += list[i] + ', '; 
     }
   }
   return joinedString;
