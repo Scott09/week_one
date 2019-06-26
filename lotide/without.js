@@ -21,21 +21,22 @@ const assertArraysEqual = function(array1, array2){
 };
 
 
-const without = function(array, unwanteditems) {
-  let array1 = array.slice(0);
-  for (let j = 0; j < array1.length; j++){
-    if (unwanteditems.includes(array1[j])){
-      array1.splice(j, 1);
+let without = function(array, unwanteditems) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++){
+    if (!unwanteditems.includes(array[i])) {
+      newArray.push(array[i]);
     }
   }
-  // make sure initial array was not changed
-  console.log(array);
-  // return new array without unwanted items
-  return array1;
+  return newArray;
 };
 
-console.log(without([1,2,3], [1]));
-console.log(without(["1", "2", "3"], [1, 2, "3"]));
-// TEST CASES USING assertArraysEqual function
-assertArraysEqual([2,3], without([1,2,3], [1]));
-assertArraysEqual([1,3,5], without([1,3,5,7], [7]));
+console.log(without([1,2,3], [1,2]));
+console.log(without([1,2,3,4,5], [1,5]));
+
+
+
+
+
+
+
